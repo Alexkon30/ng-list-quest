@@ -1,0 +1,6 @@
+<nav>
+    <ul class="navigation">
+      <li *ngFor="let route of routes" [routerLink]="route.link" class="navigation__item" (click)="toggleDrawer()">
+        {{route.title}}</li>
+    </ul>
+  </nav>
