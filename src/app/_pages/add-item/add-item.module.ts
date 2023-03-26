@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { CreateFormComponent } from 'src/app/_components/create-form/create-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [AddItemComponent, CreateFormComponent],
@@ -22,7 +22,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     FormsModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatTooltipModule
+    MatTooltipModule,
   ],
 })
 export class AddItemModule {}

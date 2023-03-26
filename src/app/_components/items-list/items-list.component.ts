@@ -1,13 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ItemsService } from 'src/app/_services/items.service';
+import { Item } from 'src/app/_types/item';
 
 @Component({
   selector: 'app-items-list',
   templateUrl: './items-list.component.html',
-  styleUrls: ['./items-list.component.scss']
+  styleUrls: ['./items-list.component.scss'],
 })
-export class ItemsListComponent {
-  items = [
-    {id: 1, title: 'title 1', content: 'content 1'},
-    {id: 2, title: 'title 2', content: 'content 2'}
-  ]
+export class ItemsListComponent implements OnInit {
+  items: Item[] = [];
+  itemsSubscription!: Subscription;
+
+  constructor(private itemsService: ItemsService) {}
+
+  ngOnInit(): void {
+    this.getItems();
+  }
+
+  getItems(): void {
+    this.itemsSubscription = this.itemsService
+      .getItems()
+      .subscribe((items) => (this.items = items));
+  }
+
+  ngOnDestroy() {
+    this.itemsSubscription.unsubscribe();
+  }
 }

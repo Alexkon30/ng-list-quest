@@ -1,8 +1,8 @@
-<mat-card class="card" (click)="openItemInfo(item.id)">
+<mat-card class="card" (click)="openItemInfo(item?.id)">
     <mat-card-header class="card__header">
-        <mat-card-title class="card__title">{{item.title}}</mat-card-title>
+        <mat-card-title class="card__title">{{item?.title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content class="card__content">
-        {{item.content}}
+        {{item?.content}}
     </mat-card-content>
 </mat-card>

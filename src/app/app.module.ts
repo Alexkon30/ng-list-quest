@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ContainerComponent } from './_components/container/container.component';
 import { ToolbarComponent } from './_components/toolbar/toolbar.component';
 import { NavigationComponent } from './_components/navigation/navigation.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, ContainerComponent, ToolbarComponent, NavigationComponent],
@@ -20,7 +21,8 @@ import { NavigationComponent } from './_components/navigation/navigation.compone
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
