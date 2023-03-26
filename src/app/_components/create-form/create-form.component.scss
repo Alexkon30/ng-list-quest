@@ -1,0 +1,24 @@
+.card {
+    width: 30rem;
+    margin: 10rem auto;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-around;
+
+        & button {
+            width: 12rem;
+        }
+    }
+}

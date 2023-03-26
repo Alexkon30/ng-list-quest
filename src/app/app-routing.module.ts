@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'new',
-    loadChildren: () => import('./_pages/create-form/create-form.module').then(m => m.CreateFormModule)
+    loadChildren: () => import('./_pages/add-item/add-item.module').then(m => m.AddItemModule)
   },
   {
     path: 'info/:id',
