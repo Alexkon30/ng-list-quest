@@ -3,4 +3,11 @@
     <mat-icon fontIcon="menu"></mat-icon>
   </button>
   <span>Ng List Quest</span>
+  <div class="spacer"></div>
+  <button mat-icon-button (click)="setDarkTheme()" *ngIf="this.isLight">
+    <mat-icon fontIcon="wb_sunny"></mat-icon>
+  </button>
+  <button mat-icon-button (click)="setLightTheme()" *ngIf="!this.isLight">
+    <mat-icon fontIcon="wb_cloudy"></mat-icon>
+  </button>
 </mat-toolbar>

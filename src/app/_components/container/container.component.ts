@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-container',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent {
+  @HostBinding('class') className = '';
+  darkClassName = 'darkMode';
 
+  toggleMode(isLight: boolean) {
+    this.className = isLight ? '' : this.darkClassName;
+  }
 }
